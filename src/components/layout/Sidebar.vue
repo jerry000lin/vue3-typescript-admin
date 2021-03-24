@@ -19,8 +19,8 @@
 </template>
 
 <script>
-// import bus from "../common/bus";
-export default {
+import { defineComponent } from "vue";
+export default defineComponent({
   data() {
     return {
       items: [
@@ -60,7 +60,7 @@ export default {
       return this.$store.state.collapse;
     },
   },
-};
+});
 </script>
 
 <style scoped>

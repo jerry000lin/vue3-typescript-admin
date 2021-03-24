@@ -9,10 +9,11 @@
     </div>
   </div>
 </template>
-<script>
-import vHeader from "@/components/layout/Header";
-import vSidebar from "@/components/layout/Sidebar";
-export default {
+<script lang="ts">
+import vHeader from "@/components/layout/Header.vue";
+import vSidebar from "@/components/layout/Sidebar.vue";
+import { defineComponent } from "vue";
+export default defineComponent({
   components: {
     vHeader,
     vSidebar,
@@ -22,7 +23,7 @@ export default {
       return this.$store.state.collapse;
     },
   },
-};
+});
 </script>
 <style lang="less">
 .content-box {

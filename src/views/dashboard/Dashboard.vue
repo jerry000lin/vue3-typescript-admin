@@ -1,11 +1,12 @@
 <template>
-  <div class="view-container Dashboard">Dashboard</div>
+  <div class="Dashboard">Dashboard</div>
 </template>
 <script>
-export default {
+import { defineComponent } from "vue";
+export default defineComponent({
   setup() {
     return {};
   },
-};
+});
 </script>
 <style lang="less"></style>

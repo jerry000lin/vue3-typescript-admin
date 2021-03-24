@@ -1,11 +1,12 @@
 <template>
-  <div class="view-container Experiment">Experiment page</div>
+  <div class="Experiment">Experiment</div>
 </template>
 <script>
-export default {
+import { defineComponent } from "vue";
+export default defineComponent({
   setup() {
     return {};
   },
-};
+});
 </script>
 <style lang="less"></style>

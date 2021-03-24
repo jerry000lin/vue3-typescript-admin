@@ -1,11 +1,12 @@
 <template>
-  <div class="view-container Algorithm">Algorithm</div>
+  <div class="Algorithm">Algorithm</div>
 </template>
 <script>
-export default {
+import { defineComponent } from "vue";
+export default defineComponent({
   setup() {
     return {};
   },
-};
+});
 </script>
 <style lang="less"></style>

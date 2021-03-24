@@ -66,25 +66,27 @@
     </div>
   </div>
 </template>
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+import { mapState } from "vuex";
+export default defineComponent({
   data() {
     return {
       message: 2,
     };
   },
   computed: {
-    username() {
+    ...mapState({
+      collapse: "collapse",
+    }),
+    username(): string {
       let username = localStorage.getItem("ms_username");
       return username ? username : "";
-    },
-    collapse() {
-      return this.$store.state.collapse;
     },
   },
   methods: {
     // 用户名下拉菜单选择事件
-    handleUserCommand(command) {
+    handleUserCommand(command: string) {
       if (command == "loginout") {
         localStorage.removeItem("ms_username");
         this.$router.push("/login");
@@ -106,7 +108,7 @@ export default {
       this.collapseChage();
     }
   },
-};
+});
 </script>
 <style scoped lang="less">
 .header {

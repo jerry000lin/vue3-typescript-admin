@@ -1,19 +1,12 @@
 <template>
-  <div class="view-container Sumary">
-    <el-button>tst</el-button>
-  </div>
+  <div class="Sumary">Sumary</div>
 </template>
-<script lang="ts">
-import useCouter from "@/hook/useCouter";
-
-export default {
+<script>
+import { defineComponent } from "vue";
+export default defineComponent({
   setup() {
-    const { count, add } = useCouter();
-    return {
-      count,
-      add,
-    };
+    return {};
   },
-};
+});
 </script>
 <style lang="less"></style>
